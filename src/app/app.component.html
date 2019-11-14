@@ -1,7 +1,14 @@
-<ul>
-  <li>Walk the dog</li>
-  <li>Go to work</li>
-  <li>Cook dinner</li>
-  <li>Foo</li>
-  <li>Bar</li>
-</ul>
+<div class="container">
+  <ul>
+    <li
+      *ngFor="let todo of todos"
+      [ngClass]="{ 'todo-deleted': todo.isDeleted }"
+      class="mt-2"
+    >
+      {{ todo.text }}
+      <button (click)="delete(todo.id)" class="btn btn-danger btn-sm ml-2">
+        X
+      </button>
+    </li>
+  </ul>
+</div>
