@@ -2,19 +2,27 @@
   <i class="fas fa-calendar-check mr-3"></i>My Todos
 </nav>
 
-<div class="container">
-  <div class="card mt-5">
-    <ul class="mt-4">
-      <li
-        *ngFor="let todo of todos"
-        [ngClass]="{ 'todo-deleted': todo.isDeleted }"
-        class="mt-2"
-      >
-        {{ todo.text }}
-        <button (click)="delete(todo.id)" class="btn btn-danger btn-sm ml-2">
-          X
-        </button>
-      </li>
-    </ul>
+<div class="container mx-auto">
+  <div class="row mx-auto">
+    <div class="card mt-5 col-md-6 mx-auto">
+      <div class="card-header text-center">Todays Tasks</div>
+      <div class="card-body">
+        <ul class="mt-4">
+          <li
+            *ngFor="let todo of todos"
+            [ngClass]="{ 'todo-deleted': todo.isDeleted }"
+            class="mt-2"
+          >
+            {{ todo.text }}
+            <button
+              (click)="delete(todo.id)"
+              class="btn btn-danger btn-sm ml-2"
+            >
+              X
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
