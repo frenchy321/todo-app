@@ -4,7 +4,7 @@ type Todo = {
   id: number;
   text: string;
   isCompleted: boolean;
-  delTodos: boolean;
+  isDeleted: boolean;
 };
 
 @Component({
@@ -20,31 +20,31 @@ export class AppComponent {
       id: 1,
       text: "Walk the dog",
       isCompleted: false,
-      delTodos: false
+      isDeleted: false
     },
     {
       id: 2,
       text: "Got to the gym",
       isCompleted: false,
-      delTodos: false
+      isDeleted: false
     },
     {
       id: 3,
       text: "get the paper",
       isCompleted: false,
-      delTodos: false
+      isDeleted: false
     },
     {
       id: 4,
       text: "string",
       isCompleted: false,
-      delTodos: false
+      isDeleted: false
     },
     {
       id: 5,
       text: "bar",
       isCompleted: false,
-      delTodos: false
+      isDeleted: false
     }
   ];
 
@@ -56,11 +56,9 @@ export class AppComponent {
     }
   }
 
-  // markAsDelete(todos) {
-  //   for (let todo of this.todos) {
-  //     if (todo.id === id) {
-  //       todo.isDeleted = !todo.isDeleted;
-  //     }
-  //   }
-  // }
+  markAsDelete() {
+    for (let todo of this.todos) {
+      todo.isDeleted = true;
+    }
+  }
 }

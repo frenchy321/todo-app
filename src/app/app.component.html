@@ -6,8 +6,8 @@
   <div class="row">
     <div class="col-md-12">
       <div class="icons mt-2 float-right">
-        <i (click)="(todos)" class="fas fa-plus add"></i>
-        <i (click)="(todos)" class="fas fa-trash-alt ml-3 del"></i>
+        <i class="fas fa-plus add"></i>
+        <i (click)="markAsDelete()" class="fas fa-trash-alt ml-3 del"></i>
       </div>
     </div>
   </div>
@@ -20,7 +20,10 @@
           <ul class="mt-4">
             <li
               *ngFor="let todo of todos"
-              [ngClass]="{ completed: todo.isCompleted }"
+              [ngClass]="{
+                completed: todo.isCompleted,
+                deleted: todo.isDeleted
+              }"
               class=" mt-2"
             >
               {{ todo.text }}
