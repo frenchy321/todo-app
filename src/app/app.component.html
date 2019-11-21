@@ -3,29 +3,36 @@
 </nav>
 
 <div class="container">
-  <div class="icons float-right mt-2">
-    <i class="fas fa-pencil-alt add"></i>
-    <i class="fas fa-trash-alt ml-3 del"></i>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="icons mt-2 float-right">
+        <i (click)="(todos)" class="fas fa-plus add"></i>
+        <i (click)="(todos)" class="fas fa-trash-alt ml-3 del"></i>
+      </div>
+    </div>
   </div>
-  <div class="row mx-auto">
-    <div class="card mt-5 col-md-6 mx-auto">
-      <div class="card-header text-center">Todays Tasks</div>
-      <div class="card-body">
-        <ul class="mt-4">
-          <li
-            *ngFor="let todo of todos"
-            [ngClass]="{ 'todo-deleted': todo.isDeleted }"
-            class="mt-2"
-          >
-            {{ todo.text }}
-            <button
-              (click)="delete(todo.id)"
-              class="btn btn-danger btn-sm ml-2"
+
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card mt-5">
+        <div class="card-header text-center w-100">Todays Tasks</div>
+        <div class="card-body">
+          <ul class="mt-4">
+            <li
+              *ngFor="let todo of todos"
+              [ngClass]="{ completed: todo.isCompleted }"
+              class=" mt-2"
             >
-              X
-            </button>
-          </li>
-        </ul>
+              {{ todo.text }}
+              <button
+                (click)="markAsComplete(todo.id)"
+                class="btn btn-danger btn-sm ml-2"
+              >
+                X
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

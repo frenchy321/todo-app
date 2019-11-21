@@ -10,8 +10,12 @@ nav {
   font-size: 1.5rem;
 }
 
-.todo-deleted {
+.completed {
   text-decoration: line-through;
+}
+
+.no-todos {
+  display: none;
 }
 
 li {
