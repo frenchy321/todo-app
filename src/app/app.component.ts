@@ -56,6 +56,17 @@ export class AppComponent {
     }
   }
 
+  addTodo() {
+    const promptText = prompt("Enter todo task");
+    const newTodo = {
+      id: Math.random(),
+      isCompleted: false,
+      isDeleted: false,
+      text: promptText
+    };
+    this.todos.push(newTodo);
+  }
+
   markAsDelete() {
     for (let todo of this.todos) {
       todo.isDeleted = true;
