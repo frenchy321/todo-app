@@ -15,6 +15,10 @@ type Todo = {
 export class AppComponent {
   title = "todo-angular";
 
+  get nonDeletedTodos() {
+    return this.todos.filter(todo => !todo.isDeleted);
+  }
+
   todos: Todo[] = [
     {
       id: 1,
@@ -59,7 +63,7 @@ export class AppComponent {
   addTodo() {
     const promptText = prompt("Enter todo task");
     const newTodo = {
-      id: Math.random(),
+      id: Math.floor(Math.random() * 10) + 1,
       isCompleted: false,
       isDeleted: false,
       text: promptText

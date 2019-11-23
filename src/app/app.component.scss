@@ -6,6 +6,11 @@ nav {
   font-size: 1.5rem;
 }
 
+.spinner {
+  font-size: 100px;
+  text-align: center;
+}
+
 .card-header {
   font-size: 1.5rem;
 }
@@ -18,8 +23,8 @@ nav {
   display: none;
 }
 
-.no-todos {
-  display: none;
+.background-color {
+  background-color: #6665;
 }
 
 li {
