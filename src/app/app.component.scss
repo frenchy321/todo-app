@@ -23,9 +23,9 @@ nav {
   display: none;
 }
 
-.background-color {
+.wrapper {
   background-color: #6665;
-  min-height: 100%;
+  background: linear-gradient(75deg, rgb(102, 102, 102), rgb(182, 185, 185));
 }
 
 li {
