@@ -68,7 +68,9 @@ export class AppComponent {
       isDeleted: false,
       text: promptText
     };
-    this.todos.push(newTodo);
+    if (promptText.length > 0) {
+      this.todos.push(newTodo);
+    }
   }
 
   markAsDelete() {
