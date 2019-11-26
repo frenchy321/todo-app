@@ -19,38 +19,7 @@ export class AppComponent {
     return this.todos.filter(todo => !todo.isDeleted);
   }
 
-  todos: Todo[] = [
-    {
-      id: 1,
-      text: "Walk the dog",
-      isCompleted: false,
-      isDeleted: false
-    },
-    {
-      id: 2,
-      text: "Got to the gym",
-      isCompleted: false,
-      isDeleted: false
-    },
-    {
-      id: 3,
-      text: "get the paper",
-      isCompleted: false,
-      isDeleted: false
-    },
-    {
-      id: 4,
-      text: "string",
-      isCompleted: false,
-      isDeleted: false
-    },
-    {
-      id: 5,
-      text: "bar",
-      isCompleted: false,
-      isDeleted: false
-    }
-  ];
+  todos: Todo[] = [];
 
   markAsComplete(id) {
     for (let todo of this.todos) {
