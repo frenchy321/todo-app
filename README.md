@@ -1,5 +1,7 @@
 # TodoAngular
 
+This is a mini todo-app that i have created to demonstrate my skills using Angular.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
 ## Development server
