@@ -14,7 +14,7 @@
 
     <div class="row">
       <div class="col-md-6 mx-auto">
-        <div class="card mb-5 mt-4">
+        <div class="card mt-5 mb-4">
           <div class="card-header text-center">Todays Tasks</div>
           <div class="card-body">
             <ul class="mt-4">
@@ -36,7 +36,7 @@
               </li>
             </ul>
 
-            <div *ngIf="nonDeletedTodos.length === 0" class="">
+            <div *ngIf="nonDeletedTodos.length === 0">
               <div class="text-center">
                 <i class="far fa-smile fa-spin spinner mb-5 text-primary"></i>
 
@@ -49,5 +49,6 @@
         </div>
       </div>
     </div>
+    <div class="hidden"></div>
   </div>
 </div>
