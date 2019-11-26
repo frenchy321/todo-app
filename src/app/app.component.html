@@ -3,9 +3,9 @@
 </nav>
 <div class="wrapper background-color">
   <div class="container">
-    <div class="row pt-3">
+    <div class="row">
       <div class="col-md-12">
-        <div class="icons mt-2 float-right">
+        <div class="icons float-right">
           <i (click)="addTodo()" class="fas fa-plus add"></i>
           <i (click)="markAsDelete()" class="fas fa-trash-alt ml-3 del"></i>
         </div>
@@ -14,7 +14,7 @@
 
     <div class="row">
       <div class="col-md-6 mx-auto">
-        <div class="card mb-5">
+        <div class="card mb-5 mt-4">
           <div class="card-header text-center">Todays Tasks</div>
           <div class="card-body">
             <ul class="mt-4">
@@ -36,7 +36,7 @@
               </li>
             </ul>
 
-            <div *ngIf="nonDeletedTodos.length === 0">
+            <div *ngIf="nonDeletedTodos.length === 0" class="">
               <div class="text-center">
                 <i class="far fa-smile fa-spin spinner mb-5 text-primary"></i>
 
