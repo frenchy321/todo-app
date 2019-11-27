@@ -19,6 +19,13 @@ export class AppComponent {
     return this.todos.filter(todo => !todo.isDeleted);
   }
 
+  date: Date;
+
+  ngOnInit() {
+    this.date = new Date();
+    this.date.setDate(this.date.getDate());
+  }
+
   todos: Todo[] = [];
 
   markAsComplete(id) {
@@ -42,9 +49,11 @@ export class AppComponent {
     }
   }
 
-  markAsDelete() {
+  markAsDelete(id) {
     for (let todo of this.todos) {
-      todo.isDeleted = true;
+      if (id === id) {
+        todo.isDeleted = true;
+      }
     }
   }
 }
