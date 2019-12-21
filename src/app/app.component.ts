@@ -39,7 +39,7 @@ export class AppComponent {
   addTodo() {
     const promptText = prompt("Enter todo task");
     const newTodo = {
-      id: Math.floor(Math.random() * 10) + 1,
+      id: Math.floor(Math.random() * 10000) + 1,
       isCompleted: false,
       isDeleted: false,
       text: promptText
